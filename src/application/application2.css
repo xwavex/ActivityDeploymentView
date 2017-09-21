@@ -1,0 +1,65 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.roundBtn {
+	-fx-background-color: #00000000;
+	-fx-background-image: url("refresh.png");
+    -fx-background-size: 32 32;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.backBtn {
+	-fx-background-color: #00000000;
+	-fx-background-image: url("backspace.png");
+    -fx-background-size: 32 32;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.upBtn {
+	-fx-background-color: #00000000;
+	-fx-background-image: url("up-arrow.png");
+    -fx-background-size: 24 24;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.upupBtn {
+	-fx-background-color: #00000000;
+	-fx-background-image: url("up-up-arrow.png");
+    -fx-background-size: 24 24;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.downBtn {
+	-fx-background-color: #00000000;
+	-fx-background-image: url("down-arrow.png");
+    -fx-background-size: 24 24;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.downdownBtn {
+	-fx-background-color: #00000000;
+	-fx-background-image: url("down-down-arrow.png");
+    -fx-background-size: 24 24;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.addBtn {
+	-fx-background-color: #00000000;
+	-fx-background-image: url("add-arrow.png");
+    -fx-background-size: 24 24;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.removeBtn {
+	-fx-background-color: #00000000;
+	-fx-background-image: url("remove-arrow.png");
+    -fx-background-size: 24 24;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+

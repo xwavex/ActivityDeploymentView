@@ -263,7 +263,7 @@ public class MainWindowController {
 			Label lbl = new Label("Item " + i);
 			try {
 				lbl.setGraphic(new ImageView(
-						new Image(new FileInputStream(Main.class.getResource("up-arrow.png").getFile()))));
+						new Image(new FileInputStream(Main.class.getResource("processor.png").getFile()))));
 				sub_selection.getItems().add(lbl);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -276,7 +276,7 @@ public class MainWindowController {
 			Label lbl = new Label("Content? " + i);
 			try {
 				lbl.setGraphic(new ImageView(
-						new Image(new FileInputStream(Main.class.getResource("up-up-arrow.png").getFile()))));
+						new Image(new FileInputStream(Main.class.getResource("processor.png").getFile()))));
 				sub_content.getItems().add(lbl);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
