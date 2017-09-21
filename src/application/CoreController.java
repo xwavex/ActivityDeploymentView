@@ -1,13 +1,19 @@
 package application;
 
-
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Random;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXMasonryPane;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
@@ -29,6 +35,9 @@ public class CoreController {
 	}
 
 	public void initializeParentGridPane(int cores) {
+		core_parentgrid.setHgap(5);
+		core_parentgrid.setVgap(5);
+
 		int dimY = cores / (int) Math.sqrt(cores);
 		int dimX = 0;
 		// Calc only dimensions
@@ -65,8 +74,7 @@ public class CoreController {
 		for (int i = 0; i < cores; i++) {
 			int x = 0;
 			int y = 0;
-//			Label lbl = new Label("asdC " + i);
-
+			// Label lbl = new Label("asdC " + i);
 
 			if ((i % dimY) > 0) {
 				x = i / dimY;
@@ -76,20 +84,18 @@ public class CoreController {
 				x = i / dimY;
 				y = 0;
 			}
-//			GridPane.setConstraints(lbl, x, y);// column/row
-//			core_parentgrid.getChildren().add(lbl);
+			// GridPane.setConstraints(lbl, x, y);// column/row
+			// core_parentgrid.getChildren().add(lbl);
 
-			JFXMasonryPane internalMasonry1 = new JFXMasonryPane();
-			internalMasonry1.setStyle("-fx-background-color: green;");
-			internalMasonry1.setCellWidth(10);
-			internalMasonry1.setCellHeight(10);
-
+			JFXMasonryPane internalMasonry1 = createMasonryPane();
 			Random r = new Random();
 			for (int k = 0; k < 5; k++) {
-				//dummy
-				Label lbl = new Label("lll " + k);
-//				lbl.setPrefSize(20, 20);
-				lbl.setStyle("-fx-background-color:rgb(" + r.nextInt(255) + "," + r.nextInt(255) + "," + r.nextInt(255) + ");");
+				// dummy
+				Label lbl = new Label("vcbcbvcbcbcbcbvvbc " + k);
+				lbl.setTooltip(new Tooltip(""+lbl.getText()));
+				lbl.setPrefSize(100, 70);
+				lbl.setAlignment(Pos.BOTTOM_CENTER);
+				lbl.getStyleClass().add("activityLbl");
 				internalMasonry1.getChildren().add(lbl);
 			}
 			GridPane.setConstraints(internalMasonry1, x, y);// column/row
@@ -98,8 +104,14 @@ public class CoreController {
 		System.out.println("Rows " + core_parentgrid.getRowConstraints().size());
 		System.out.println("Cols " + core_parentgrid.getColumnConstraints().size());
 
+	}
 
-
+	private JFXMasonryPane createMasonryPane() {
+		JFXMasonryPane internalMasonry1 = new JFXMasonryPane();
+		internalMasonry1.setStyle("-fx-background-color: white;");
+		internalMasonry1.setCellWidth(100);
+		internalMasonry1.setCellHeight(70);
+		return internalMasonry1;
 	}
 
 }
