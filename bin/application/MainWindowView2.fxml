@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.transform.Affine?>
+
+<AnchorPane minHeight="360.0" minWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+	<children>
+		<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="330.0" minWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" minHeight="50.0" minWidth="300.0" prefHeight="50.0">
+					<children>
+						<JFXButton fx:id="sub_back" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#backBtnClicked" prefHeight="50.0" prefWidth="50.0" styleClass="backBtn" stylesheets="@application.css" text=" " textAlignment="CENTER">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</JFXButton>
+						<Separator minWidth="20.0" prefWidth="50.0" visible="false" HBox.hgrow="ALWAYS" />
+						<Label fx:id="sub_lbl" alignment="CENTER" contentDisplay="CENTER" minWidth="100.0" prefWidth="150.0" text="Activity 1" textAlignment="CENTER">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Separator minWidth="20.0" prefWidth="50.0" visible="false" HBox.hgrow="ALWAYS" />
+						<JFXButton fx:id="sub_reload" alignment="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#reloadBtnClicked" styleClass="roundBtn" stylesheets="@application.css" text=" " />
+					</children>
+					<VBox.margin>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox VBox.vgrow="ALWAYS">
+					<children>
+						<JFXListView fx:id="sub_selection" minHeight="260.0" minWidth="200.0" prefHeight="260.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+						<VBox alignment="TOP_CENTER" maxWidth="50.0" minHeight="100.0" minWidth="50.0" prefHeight="100.0" prefWidth="50.0">
+							<children>
+								<JFXButton fx:id="sub_add" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#addBtnClicked" prefHeight="50.0" prefWidth="50.0" styleClass="addBtn" stylesheets="@application.css" text=" " textAlignment="CENTER" />
+								<JFXButton fx:id="sub_remove" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#removeBtnClicked" prefHeight="50.0" prefWidth="50.0" styleClass="removeBtn" stylesheets="@application.css" text=" " textAlignment="CENTER" />
+							</children>
+							<HBox.margin>
+								<Insets top="80.0" />
+							</HBox.margin>
+						</VBox>
+						<JFXListView fx:id="sub_content" minHeight="260.0" minWidth="200.0" prefHeight="260.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</JFXListView>
+						<VBox alignment="TOP_CENTER" maxWidth="50.0" minHeight="100.0" minWidth="50.0" prefHeight="100.0" prefWidth="50.0">
+							<children>
+								<JFXButton fx:id="sub_upup" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#upupBtnClicked" prefHeight="50.0" prefWidth="50.0" styleClass="upupBtn" stylesheets="@application.css" text=" " textAlignment="CENTER" />
+								<JFXButton fx:id="sub_up" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#upBtnClicked" prefHeight="50.0" prefWidth="50.0" styleClass="upBtn" stylesheets="@application.css" text=" " textAlignment="CENTER" />
+								<JFXButton fx:id="sub_down" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#downBtnClicked" prefHeight="50.0" prefWidth="50.0" styleClass="downBtn" stylesheets="@application.css" text=" " textAlignment="CENTER" />
+								<JFXButton fx:id="sub_downdown" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#downdownBtnClicked" prefHeight="50.0" prefWidth="50.0" styleClass="downdownBtn" stylesheets="@application.css" text=" " textAlignment="CENTER" />
+							</children>
+							<HBox.margin>
+								<Insets top="30.0" />
+							</HBox.margin>
+						</VBox>
+					</children>
+				</HBox>
+				<HBox alignment="TOP_RIGHT" maxHeight="30.0" minHeight="30.0" minWidth="220.0" prefHeight="30.0" prefWidth="200.0">
+					<children>
+						<HBox maxWidth="80.0">
+							<SVGPath id="periodicon" content="m 181.83722,592.173 c 0,0 1.47641,-6.69937 4.38639,-6.66749 3.51089,0.0385 1.02699,12.94807 4.39493,13.67724 2.82486,0.61159 4.68709,-6.72621 4.68709,-6.72621" opacity="1" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.0">
+								<fill>
+									TRANSPARENT
+								</fill>
+								<stroke>
+									<Color>
+										<red>0.33</red>
+										<green>0.33</green>
+										<blue>0.33</blue>
+									</Color>
+								</stroke>
+							</SVGPath>
+							<padding>
+								<Insets top="2.5" />
+							</padding>
+						</HBox>
+						<HBox fx:id="hb_period" maxWidth="80.0" minWidth="50.0" prefHeight="10.0" prefWidth="50.0">
+							<HBox.margin>
+								<Insets left="10.0" />
+							</HBox.margin>
+							<padding>
+								<Insets bottom="2.0" />
+							</padding>
+						</HBox>
+
+						<Separator maxWidth="20.0" prefWidth="20.0" visible="false" />
+
+						<HBox maxWidth="80.0">
+							<Group id="priorityicon" opacity="1.0">
+								<children>
+									<Rectangle id="rect208884" height="2.0089285" opacity="1" strokeWidth="0.60000002" width="2.03125" x="383.39264" y="5.9559431">
+										<fill>
+											<Color>
+												<red>0.33</red>
+												<green>0.33</green>
+												<blue>0.33</blue>
+											</Color>
+										</fill>
+
+									</Rectangle>
+									<Rectangle id="rect208884-5" height="2.0089285" opacity="1" strokeWidth="0.60000002" width="2.03125" x="383.39264" y="10.7327">
+										<fill>
+											<Color>
+												<red>0.33</red>
+												<green>0.33</green>
+												<blue>0.33</blue>
+											</Color>
+										</fill>
+
+									</Rectangle>
+									<Rectangle id="rect208884-5-8" height="2.0089285" opacity="1" strokeWidth="0.60000002" width="2.03125" x="383.39264" y="8.3442612">
+										<fill>
+											<Color>
+												<red>0.33</red>
+												<green>0.33</green>
+												<blue>0.33</blue>
+											</Color>
+										</fill>
+
+									</Rectangle>
+									<Group id="text208804-0-4-5" opacity="1.0">
+										<children>
+											<SVGPath id="path3007" content="m 381.57309,11.620183 c 0.14648,10e-7 0.27099,0.05127 0.37353,0.153809 0.10254,0.102539 0.15381,0.225586 0.15381,0.36914 0,0.140626 -0.0527,0.262207 -0.1582,0.364746 -0.10254,0.102539 -0.22559,0.153809 -0.36914,0.153809 -0.14063,0 -0.26221,-0.05127 -0.36475,-0.153809 -0.10254,-0.102539 -0.15381,-0.22412 -0.15381,-0.364746 0,-0.143554 0.0513,-0.266601 0.15381,-0.36914 0.10254,-0.102539 0.22412,-0.153808 0.36475,-0.153809 m 0.29004,-0.553711 -0.57129,0 -0.14063,-4.996582 0.84815,0 -0.13623,4.996582" opacity="1">
+												<fill>
+													<Color>
+														<red>0.33</red>
+														<green>0.33</green>
+														<blue>0.33</blue>
+													</Color>
+												</fill>
+											</SVGPath>
+										</children>
+									</Group>
+								</children>
+								<transforms>
+									<Affine mxx="2.2401731" mxy="0" myx="0" myy="2.2401731" tx="-476" ty="-10">
+									</Affine>
+								</transforms>
+							</Group>
+							<padding>
+								<Insets top="7.5" />
+							</padding>
+						</HBox>
+
+						<HBox fx:id="hb_priority" maxWidth="80.0" minWidth="50.0" prefHeight="10.0" prefWidth="50.0">
+							<HBox.margin>
+								<Insets left="10.0" />
+							</HBox.margin>
+							<padding>
+								<Insets bottom="2.0" />
+							</padding>
+						</HBox>
+					</children>
+					<VBox.margin>
+						<Insets left="50.0" right="50.0" top="5.0" />
+					</VBox.margin>
+				</HBox>
+			</children>
+		</VBox>
+	</children>
+</AnchorPane>

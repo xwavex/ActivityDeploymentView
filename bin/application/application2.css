@@ -63,16 +63,3 @@
     -fx-background-position: center;
 }
 
-.activityLbl {
-	-fx-background-color: #00000000;
-	-fx-background-image: url("hexagon24.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: 50 50;
-    -fx-background-position: top, center;
-    -fx-text-fill: #333333;
-}
-
-.bkgrndCoreLbl {
-    -fx-text-fill: #DDDDDD;
-}
-
